@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e21973d480.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <img src="media/thumbnail.png" alt="media-img" class="song-img" />
+        <h1 id="song-name">Despacito</h1>
+        <p id="song-artist">Luis Fonsi ft.Puerto Rican</p>
+
+        <audio id="song">
+          <source src="media/Parano.mp3" type="audio/mp3" />
+        </audio>
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div onclick="nextSong()"><i class="fa-solid fa-backward"></i></div>
+          <div onclick="playPause()">
+            <i class="fa-solid fa-play" id="ctrlIcon"></i>
+          </div>
+          <div onclick="prevSong()"><i class="fa-solid fa-forward"></i></div>
+        </div>
+        <!-- <ul id="playlist">
+          <li onclick="playSong(0)">Despacito</li>
+          <li onclick="playSong(1)">Song 2</li>
+        </ul> -->
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
